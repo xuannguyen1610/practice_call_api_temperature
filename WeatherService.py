@@ -20,7 +20,7 @@ def get_weather_from_url(city: str):
         return None
 
 def get_weather_from_db(city:str):
-    weather_repo = WeatherRepository(host="157.230.244.233", user="stock_admin", password="aVBrVDczZzJ5OUVma3JR", database="stock")
+    weather_repo = WeatherRepository(host="", user="", password="", database="")
     weather = weather_repo.select_weather_from_db(city)
     if weather is None:
         try:
@@ -29,10 +29,3 @@ def get_weather_from_db(city:str):
         except:
             weather = None
     return weather
-
-
-
-
-
-
-
